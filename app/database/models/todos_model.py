@@ -1,4 +1,4 @@
-from database.connection import Base
+from ...database.connection import Base
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 
 

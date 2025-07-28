@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
-from schemas.auth import CreateUserRequest, Token
+from ..schemas.auth import CreateUserRequest, Token
 from typing import Annotated
 from sqlalchemy.orm import Session
-from dependencies import get_db
-from database.models.todos_model import Users
+from ..dependencies import get_db
+from ..database.models.todos_model import Users
 from datetime import timedelta, datetime, timezone
 from jose import jwt, JWTError
 from starlette import status
